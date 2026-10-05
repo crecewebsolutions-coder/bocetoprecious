@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Your Order — Precious Sea Salt</title>
+  <meta name="description" content="Track your artisanal sea salt order directly with the official courier using your tracking code.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <span data-i18n="announcement">FAST SHIPPING ON ALL PRODUCTS | 100% NATURAL SEA SALT HARVESTED IN COLIMA, MEXICO</span>
+  </div>
+
+  <!-- SITE HEADER WITH DROPDOWN SUBMENUS -->
+  <header class="site-header">
+    <div class="header-container">
+      
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+
+      <a href="index.html" class="header-logo">
+        <img src="assets/images/logo.png" alt="Precious Sea Salt">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav>
+        <ul class="nav-menu">
+          
+          <!-- Home -->
+          <li class="nav-item-dropdown">
+            <a href="index.html" class="nav-link">
+              <span data-i18n="nav_home">Home</span>
+              <svg class="nav-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <ul class="nav-submenu">
+              <li class="nav-submenu-item"><a href="index.html#hero-banner" class="nav-submenu-link"><span class="nav-submenu-title" data-i18n="sub_home_hero">Main Hero</span><span class="nav-submenu-desc" data-i18n="sub_home_hero_desc">Origin and natural overview</span></a></li>
+              <li class="nav-submenu-item"><a href="index.html#three-salts" class="nav-submenu-link"><span class="nav-submenu-title" data-i18n="sub_home_salts">The 3 Artisan Salts</span><span class="nav-submenu-desc" data-i18n="sub_home_salts_desc">Flor de Sal, Fleur de Sel & Sal Marina</span></a></li>
+              <li class="nav-submenu-item"><a href="index.html#origin-section" class="nav-submenu-link"><span class="nav-submenu-title" data-i18n="sub_home_origin">Born in Colima</span><span class="nav-submenu-desc" data-i18n="sub_home_origin_desc">Volcanic lagoons and sunny coast</span></a></li>
+            </ul>
+          </li>
+
+          <!-- Catalog -->
+          <li class="nav-item-dropdown">
+            <a href="shopall.html" class="nav-link">
+              <span data-i18n="nav_catalog">Catalog</span>
+              <svg class="nav-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <ul class="nav-submenu">
+              <li class="nav-submenu-item"><a href="condimento1.html" class="nav-submenu-link"><span class="nav-submenu-title" data-i18n="sub_cat_flor">Flor de Sal de Colima (100g)</span><span class="nav-submenu-desc" data-i18n="sub_cat_flor_desc">Delicate finishing caviar crystals</span></a></li>
+              <li class="nav-submenu-item"><a href="condimento2.html" class="nav-submenu-link"><span class="nav-submenu-title" data-i18n="sub_cat_fleur">Fleur de Sel Gourmet (100g)</span><span class="nav-submenu-desc" data-i18n="sub_cat_fleur_desc">Subtle crunch for chef plating</span></a></li>
+              <li class="nav-submenu-item"><a href="condimiento3.html" class="nav-submenu-link"><span class="nav-submenu-title" data-i18n="sub_cat_marina">Sal Marina Natural (1 lb)</span><span class="nav-submenu-desc" data-i18n="sub_cat_marina_desc">Unrefined coarse everyday cooking salt</span></a></li>
+              <li class="nav-submenu-item"><a href="shopall.html" class="nav-submenu-link"><span class="nav-submenu-title" data-i18n="sub_cat_all">View Complete Catalog</span><span class="nav-submenu-desc" data-i18n="sub_cat_all_desc">Explore all sizes and packages</span></a></li>
+            </ul>
+          </li>
+
+          <!-- Condiments -->
+          <li class="nav-item-dropdown">
+            <a href="index.html#condimentos-section" class="nav-link">
+              <span data-i18n="nav_condiments">Condiments</span>
+              <span class="nav-badge" data-i18n="coming_soon_badge">Soon</span>
+              <svg class="nav-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <ul class="nav-submenu">
+              <li class="nav-submenu-item"><a href="index.html#condimentos-section" class="nav-submenu-link" onclick="notifyComingSoon('Sal Marina Ahumada Artesanal')"><span class="nav-submenu-title" data-i18n="sub_cond_ahumada">Wood Smoked Sea Salt</span><span class="nav-submenu-desc" data-i18n="sub_cond_ahumada_desc">Cold-smoked over wild mesquite</span></a></li>
+              <li class="nav-submenu-item"><a href="index.html#condimentos-section" class="nav-submenu-link" onclick="notifyComingSoon('Flor de Sal con Ajo Negro y Hierbas')"><span class="nav-submenu-title" data-i18n="sub_cond_ajo">Black Garlic & Fine Herbs</span><span class="nav-submenu-desc" data-i18n="sub_cond_ajo_desc">Gourmet balsamic savory blend</span></a></li>
+              <li class="nav-submenu-item"><a href="index.html#condimentos-section" class="nav-submenu-link" onclick="notifyComingSoon('Sal de Mar con Chiltepín y Limón')"><span class="nav-submenu-title" data-i18n="sub_cond_chiltepin">Chiltepin Pepper & Lime</span><span class="nav-submenu-desc" data-i18n="sub_cond_chiltepin_desc">Zesty Mexican citrus heat</span></a></li>
+            </ul>
+          </li>
+
+          <!-- Recipes -->
+          <li class="nav-item-dropdown">
+            <a href="recipes.html" class="nav-link">
+              <span data-i18n="nav_recipes">Recipes</span>
+              <svg class="nav-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <ul class="nav-submenu">
+              <li class="nav-submenu-item"><a href="recipes.html" class="nav-submenu-link"><span class="nav-submenu-title" data-i18n="sub_rec_all">All Gourmet Recipes</span><span class="nav-submenu-desc" data-i18n="sub_rec_all_desc">Step-by-step chef guides & pairings</span></a></li>
+            </ul>
+          </li>
+
+          <!-- Track Order (Active) -->
+          <li class="nav-item-dropdown">
+            <a href="tracking.html" class="nav-link active" style="color:var(--primary-green); font-weight:800;">
+              <span data-i18n="nav_tracking">Track Order</span>
+              <svg class="nav-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <ul class="nav-submenu">
+              <li class="nav-submenu-item"><a href="#tracking-bridge" class="nav-submenu-link"><span class="nav-submenu-title" data-i18n="sub_track_bridge">Track Package by Number</span><span class="nav-submenu-desc" data-i18n="sub_track_bridge_desc">Direct bridge using owner-sent code</span></a></li>
+              <li class="nav-submenu-item"><a href="#couriers" class="nav-submenu-link"><span class="nav-submenu-title" data-i18n="sub_track_couriers">Official Courier Directory</span><span class="nav-submenu-desc" data-i18n="sub_track_couriers_desc">FedEx, DHL, Estafeta, Paquetexpress, UPS</span></a></li>
+            </ul>
+          </li>
+
+          <!-- Our Story -->
+          <li class="nav-item-dropdown">
+            <a href="aboutus.html" class="nav-link">
+              <span data-i18n="nav_our_story">Our Story</span>
+              <svg class="nav-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <ul class="nav-submenu">
+              <li class="nav-submenu-item"><a href="aboutus.html" class="nav-submenu-link"><span class="nav-submenu-title" data-i18n="sub_story_origin">Cuyutlán Salt Marshes</span><span class="nav-submenu-desc" data-i18n="sub_story_origin_desc">Pristine coastal lagoon ecosystem</span></a></li>
+            </ul>
+          </li>
+
+          <!-- FAQ -->
+          <li class="nav-item-dropdown">
+            <a href="FAQ.html" class="nav-link">
+              <span data-i18n="nav_faq">FAQ</span>
+              <svg class="nav-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <ul class="nav-submenu">
+              <li class="nav-submenu-item"><a href="FAQ.html" class="nav-submenu-link"><span class="nav-submenu-title" data-i18n="sub_faq_shipping">Shipping & Delivery Times</span><span class="nav-submenu-desc" data-i18n="sub_faq_shipping_desc">Domestic Mexico and USA deliveries</span></a></li>
+            </ul>
+          </li>
+
+          <!-- Contact -->
+          <li class="nav-item-dropdown">
+            <a href="contact.html" class="nav-link">
+              <span data-i18n="nav_contact">Contact</span>
+              <svg class="nav-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <ul class="nav-submenu">
+              <li class="nav-submenu-item"><a href="https://wa.me/5213120000000" target="_blank" class="nav-submenu-link"><span class="nav-submenu-title" data-i18n="sub_contact_wa">Direct WhatsApp Concierge</span><span class="nav-submenu-desc" data-i18n="sub_contact_wa_desc">Immediate response from our team</span></a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Action Icons -->
+      <div class="header-actions">
+        <div class="lang-dropdown-wrapper">
+          <button class="lang-selector-btn" id="langSelectorBtn" aria-label="Select Language">
+            <span id="currentLangLabel">EN</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown">
+            <li class="lang-item active" data-lang="en">EN &mdash; English</li>
+            <li class="lang-item" data-lang="es">ES &mdash; Español</li>
+            <li class="lang-item" data-lang="fr">FR &mdash; Français</li>
+            <li class="lang-item" data-lang="pt">PT &mdash; Português</li>
+            <li class="lang-item" data-lang="de">DE &mdash; Deutsch</li>
+            <li class="lang-item" data-lang="it">IT &mdash; Italiano</li>
+          </ul>
+        </div>
+
+        <button class="icon-btn" onclick="toggleSearchOverlay(true)" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+
+        <button class="icon-btn" id="cartTriggerBtn" aria-label="Shopping Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-counter" id="cartCountBadge" style="display: none;">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-nav-header">
+      <img src="assets/images/logo.png" alt="Precious Sea Salt" style="height: 40px;">
+      <button class="icon-btn" id="mobileDrawerClose" aria-label="Close Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="shopall.html" data-i18n="nav_catalog">Catalog</a></li>
+      <li><a href="recipes.html" data-i18n="nav_recipes">Recipes</a></li>
+      <li><a href="tracking.html" class="active" style="color:var(--accent-gold-dark);" data-i18n="nav_tracking">Track Order</a></li>
+      <li><a href="aboutus.html" data-i18n="nav_our_story">Our Story</a></li>
+      <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- TRACKING HERO BANNER (IDENTICAL CORMORANT GARAMOND SERIF TYPOGRAPHY) -->
+  <section style="background-color: var(--primary-green); color: #ffffff; padding: 80px 24px; text-align: center;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <span class="eyebrow" style="color: var(--accent-gold-light); letter-spacing: 2.5px; font-size: 11px; font-weight: 700; text-transform: uppercase;" data-i18n="tracking_eyebrow">
+        CUSTOMER DIRECT BRIDGE
+      </span>
+      <h1 style="font-family: var(--font-serif); font-size: clamp(36px, 5vw, 52px); font-weight: 600; margin: 12px 0 16px; letter-spacing: 0.5px;" data-i18n="tracking_title">
+        Track Your Order
+      </h1>
+      <p style="font-size: 15.5px; color: rgba(255, 255, 255, 0.9); line-height: 1.7;" data-i18n="tracking_subtitle">
+        Received your tracking number via WhatsApp or email? Select your courier below and track your package directly on the official tracking portal.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN TRACKING BRIDGE CONTAINER -->
+  <main style="padding: 95px 24px; background-color: #f6f2e9;">
+    <div class="tracking-card-box" id="tracking-bridge">
+
+      <!-- 3 Visual Steps -->
+      <div class="tracking-instructions-steps">
+        <div class="tracking-step-item">
+          <div class="tracking-step-number">1</div>
+          <h4 data-i18n="tracking_step_1_title">1. Receive Tracking Code</h4>
+          <p data-i18n="tracking_step_1_desc">Our owner manually sends your tracking number via WhatsApp or social media once shipped.</p>
+        </div>
+        <div class="tracking-step-item">
+          <div class="tracking-step-number">2</div>
+          <h4 data-i18n="tracking_step_2_title">2. Select Your Courier</h4>
+          <p data-i18n="tracking_step_2_desc">Enter your tracking code and choose whether your package travels via DHL, FedEx, Estafeta, etc.</p>
+        </div>
+        <div class="tracking-step-item">
+          <div class="tracking-step-number">3</div>
+          <h4 data-i18n="tracking_step_3_title">3. Official Real-Time Status</h4>
+          <p data-i18n="tracking_step_3_desc">Click the button to open the courier official platform directly with no complicated databases.</p>
+        </div>
+      </div>
+
+      <!-- Quick Tracking Form -->
+      <form onsubmit="executeOrderTracking(event)" style="background: var(--bg-cream); padding: 28px; border-radius: 6px; border: 1px solid var(--border-light); margin-bottom: 30px;">
+        <h3 style="font-family: var(--font-serif); font-size: 24px; color: var(--primary-green); margin-bottom: 14px;">
+          Enter Your Tracking Details:
+        </h3>
+        <div class="tracking-form-row">
+          <input type="text" id="trackingCodeInput" class="tracking-input" placeholder="Paste your tracking number here..." data-i18n="tracking_input_placeholder">
+          <select id="courierSelect" class="tracking-select" required>
+            <option value="" disabled selected data-i18n="tracking_select_courier">Select your courier...</option>
+            <option value="estafeta">Estafeta</option>
+            <option value="dhl">DHL Express</option>
+            <option value="fedex">FedEx</option>
+            <option value="paquetexpress">Paquetexpress</option>
+            <option value="correos">Correos Mexpost</option>
+            <option value="minutos99">99 Minutos</option>
+            <option value="redpack">Redpack</option>
+            <option value="ups">UPS</option>
+            <option value="usps">USPS (USA)</option>
+          </select>
+          <button type="submit" class="btn-gold" style="border-radius:4px; white-space:nowrap;">
+            <span data-i18n="tracking_btn">Track on Official Portal</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Courier Directory Chips (Zero Emojis) -->
+      <div class="couriers-directory" id="couriers">
+        <h4 data-i18n="tracking_direct_couriers">Or visit your official courier directly:</h4>
+        <div class="couriers-grid">
+          <button type="button" onclick="trackDirect('estafeta')" class="courier-chip">Estafeta</button>
+          <button type="button" onclick="trackDirect('dhl')" class="courier-chip">DHL Express</button>
+          <button type="button" onclick="trackDirect('fedex')" class="courier-chip">FedEx</button>
+          <button type="button" onclick="trackDirect('paquetexpress')" class="courier-chip">Paquetexpress</button>
+          <button type="button" onclick="trackDirect('correos')" class="courier-chip">Correos Mexpost</button>
+          <button type="button" onclick="trackDirect('minutos99')" class="courier-chip">99 Minutos</button>
+          <button type="button" onclick="trackDirect('redpack')" class="courier-chip">Redpack</button>
+          <button type="button" onclick="trackDirect('ups')" class="courier-chip">UPS</button>
+          <button type="button" onclick="trackDirect('usps')" class="courier-chip">USPS (USA)</button>
+        </div>
+      </div>
+
+      <!-- WhatsApp Help -->
+      <div class="whatsapp-support-banner" style="margin-top: 32px;">
+        <div>
+          <span data-i18n="tracking_wa_help">Have questions about your tracking number? Chat with us directly on WhatsApp</span>
+        </div>
+        <a href="https://wa.me/5213120000000?text=Hola!%20Tengo%20duda%20con%20el%20rastreo%20de%20mi%20pedido" target="_blank" class="btn-whatsapp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.516 2 2.031 6.484 2.031 12c0 1.984.581 3.828 1.583 5.375L2 22l4.781-1.562c1.484.906 3.234 1.438 5.25 1.438 5.516 0 10-4.484 10-10s-4.484-9.875-10-9.875zm0 18.125c-1.781 0-3.328-.484-4.641-1.344l-.328-.219-3.094 1.016 1.031-3.016-.219-.344c-.953-1.422-1.469-3.094-1.469-4.875 0-4.578 3.719-8.297 8.297-8.297 4.578 0 8.297 3.719 8.297 8.297s-3.719 8.297-8.297 8.297zm4.547-6.203c-.25-.125-1.469-.719-1.688-.812-.234-.094-.406-.125-.578.125-.172.25-.672.812-.812.984-.156.172-.312.188-.562.062-.25-.125-1.047-.391-2-1.234-.734-.656-1.234-1.469-1.375-1.719-.156-.25-.016-.391.109-.516.109-.109.25-.281.375-.422.125-.141.172-.25.25-.422.078-.172.047-.328-.016-.453-.062-.125-.578-1.391-.797-1.906-.219-.5-.438-.438-.594-.438h-.516c-.172 0-.453.062-.688.328-.25.25-.938.922-.938 2.25 0 1.328.969 2.609 1.109 2.797.141.188 1.906 2.922 4.625 4.094.641.281 1.141.453 1.531.578.641.203 1.234.172 1.703.109.516-.078 1.469-.609 1.688-1.203.203-.594.203-1.094.141-1.203-.062-.109-.234-.172-.484-.297z"/></svg>
+          <span>Chat WhatsApp Concierge</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4 data-i18n="footer_care">CARE</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="shopall.html" data-i18n="nav_catalog">Catalog</a></li>
+          <li><a href="recipes.html" data-i18n="nav_recipes">Recipes</a></li>
+          <li><a href="aboutus.html" data-i18n="nav_our_story">Our Story</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_support">SUPPORT</h4>
+        <ul class="footer-links">
+          <li><a href="tracking.html" style="color:var(--accent-gold-light); font-weight:700;" data-i18n="nav_tracking">Track Order</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="policy.html">Privacy Policy</a></li>
+          <li><a href="shipping.html">Shipping Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-mission">
+        <h4 data-i18n="footer_mission">OUR MISSION</h4>
+        <p data-i18n="footer_mission_text">
+          At Precious, our mission is simple: to bring the natural character of Colima sea salt to everyday tables. Inspired by Mexico's coastal waters and generations of salt-making tradition, we celebrate salt in its purest form—natural, unrefined, and full of character.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-lang-select-wrapper">
+        <label for="footerLangSelect" data-i18n="footer_lang_label">Language</label>
+        <select id="footerLangSelect" class="footer-lang-select">
+          <option value="en">English (EN)</option>
+          <option value="es">Español (ES)</option>
+          <option value="fr">Français (FR)</option>
+          <option value="pt">Português (PT)</option>
+          <option value="de">Deutsch (DE)</option>
+          <option value="it">Italiano (IT)</option>
+        </select>
+      </div>
+
+      <div class="payment-badges-row">
+        <span class="pay-badge visa">VISA</span>
+        <span class="pay-badge mastercard">Mastercard</span>
+        <span class="pay-badge amex">AMEX</span>
+        <span class="pay-badge apple">Apple Pay</span>
+        <span class="pay-badge google">G Pay</span>
+        <span class="pay-badge shop">shop pay</span>
+      </div>
+
+      <div class="footer-copyright">
+        &copy; 2026 Precious Natural Sea Salt. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER WITH STRIPE ON-PAGE CHECKOUT + WHATSAPP -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3 data-i18n="cart_title">Your Cart</h3>
+      <button class="cart-close-btn" id="cartDrawerClose" aria-label="Close Cart">&times;</button>
+    </div>
+    <div class="cart-labels-row">
+      <span data-i18n="cart_product_col">PRODUCT</span>
+      <span data-i18n="cart_total_col">TOTAL</span>
+    </div>
+    <div class="cart-body" id="cartDrawerBody"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal-row">
+        <span data-i18n="cart_subtotal">Estimated Total</span>
+        <span class="cart-total-price" id="cartDrawerTotal">$0.00 USD</span>
+      </div>
+      <p class="cart-tax-notice" data-i18n="cart_tax_note">
+        Taxes, discounts and shipping calculated at checkout.
+      </p>
+
+      <button class="cart-btn-checkout" onclick="toggleStripeInCart()">
+        <span data-i18n="cart_btn_stripe_toggle">Pay with Card (Stripe)</span>
+      </button>
+
+      <div id="cartStripeBox" style="display: none;" class="stripe-checkout-box">
+        <div class="stripe-box-header">
+          <span class="stripe-brand-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#635bff" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            <span data-i18n="stripe_title">Secure Stripe Card Payment</span>
+          </span>
+          <div class="stripe-cards-badges">
+            <span class="stripe-chip-tag">VISA</span>
+            <span class="stripe-chip-tag">MC</span>
+            <span class="stripe-chip-tag">AMEX</span>
+          </div>
+        </div>
+
+        <form onsubmit="processStripePayment(event)">
+          <div class="stripe-field">
+            <label class="stripe-label" data-i18n="stripe_card_num">Card Number</label>
+            <input type="text" class="stripe-input" required placeholder="4242 4242 4242 4242" maxlength="19" oninput="handleCardNumberInput(this)">
+          </div>
+          <div class="stripe-grid-2">
+            <div class="stripe-field">
+              <label class="stripe-label" data-i18n="stripe_expiry">MM / YY</label>
+              <input type="text" class="stripe-input" required placeholder="MM / YY" maxlength="7" oninput="handleCardExpiryInput(this)">
+            </div>
+            <div class="stripe-field">
+              <label class="stripe-label" data-i18n="stripe_cvc">CVC</label>
+              <input type="text" class="stripe-input" required placeholder="123" maxlength="4">
+            </div>
+          </div>
+          <div class="stripe-grid-2">
+            <div class="stripe-field">
+              <label class="stripe-label" data-i18n="stripe_name">Name on Card</label>
+              <input type="text" class="stripe-input" required placeholder="Cardholder Name">
+            </div>
+            <div class="stripe-field">
+              <label class="stripe-label" data-i18n="stripe_zip">Postal Code</label>
+              <input type="text" class="stripe-input" required placeholder="ZIP / CP">
+            </div>
+          </div>
+
+          <button type="submit" id="drawerStripePayBtn" class="btn-stripe-pay">
+            <span data-i18n="stripe_btn_pay">Pay with Stripe</span>
+          </button>
+
+          <div class="stripe-secure-notice">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span data-i18n="stripe_secure_note">256-Bit SSL Encrypted • Powered by Stripe</span>
+          </div>
+        </form>
+      </div>
+
+      <button class="cart-btn-whatsapp" onclick="checkoutWhatsApp()" style="margin-top: 8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.516 2 2.031 6.484 2.031 12c0 1.984.581 3.828 1.583 5.375L2 22l4.781-1.562c1.484.906 3.234 1.438 5.25 1.438 5.516 0 10-4.484 10-10s-4.484-9.875-10-9.875zm0 18.125c-1.781 0-3.328-.484-4.641-1.344l-.328-.219-3.094 1.016 1.031-3.016-.219-.344c-.953-1.422-1.469-3.094-1.469-4.875 0-4.578 3.719-8.297 8.297-8.297 4.578 0 8.297 3.719 8.297 8.297s-3.719 8.297-8.297 8.297zm4.547-6.203c-.25-.125-1.469-.719-1.688-.812-.234-.094-.406-.125-.578.125-.172.25-.672.812-.812.984-.156.172-.312.188-.562.062-.25-.125-1.047-.391-2-1.234-.734-.656-1.234-1.469-1.375-1.719-.156-.25-.016-.391.109-.516.109-.109.25-.281.375-.422.125-.141.172-.25.25-.422.078-.172.047-.328-.016-.453-.062-.125-.578-1.391-.797-1.906-.219-.5-.438-.438-.594-.438h-.516c-.172 0-.453.062-.688.328-.25.25-.938.922-.938 2.25 0 1.328.969 2.609 1.109 2.797.141.188 1.906 2.922 4.625 4.094.641.281 1.141.453 1.531.578.641.203 1.234.172 1.703.109.516-.078 1.469-.609 1.688-1.203.203-.594.203-1.094.141-1.203-.062-.109-.234-.172-.484-.297z"/></svg>
+        <span data-i18n="cart_btn_wa">Order via WhatsApp</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="modal-overlay" id="searchOverlay">
+    <div class="modal-content" style="max-width: 600px;">
+      <button class="modal-close" onclick="toggleSearchOverlay(false)">&times;</button>
+      <h3 style="font-family:var(--font-serif); font-size:26px; margin-bottom:16px; text-align:center; color:var(--primary-green);">Search Precious Sea Salt</h3>
+      <div style="position:relative; margin-bottom:20px;">
+        <input type="text" id="searchInput" class="tracking-input" style="width:100%; padding-right:40px;" placeholder="Search salt, seasonings, origin or recipes..." oninput="handleSearch(this.value)">
+        <span style="position:absolute; right:14px; top:16px; color:#888;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </span>
+      </div>
+      <div id="searchResults" style="max-height: 300px; overflow-y:auto;"></div>
+    </div>
+  </div>
+
+  <!-- ORDER RECEIPT MODAL -->
+  <div class="modal-overlay" id="receiptModal">
+    <div class="modal-content" id="receiptModalBody" style="max-width: 540px;"></div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

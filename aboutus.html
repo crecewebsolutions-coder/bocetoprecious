@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story — Precious Sea Salt</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <span data-i18n="announcement">FAST SHIPPING ON ALL PRODUCTS | 100% NATURAL SEA SALT HARVESTED IN COLIMA, MEXICO</span>
+  </div>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+
+      <a href="index.html" class="header-logo">
+        <img src="assets/images/logo.png" alt="Precious Sea Salt">
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="shopall.html" class="nav-link" data-i18n="nav_catalog">Catalog</a></li>
+          <li><a href="shopall.html" class="nav-link" data-i18n="nav_shop_all">Shop All</a></li>
+          <li><a href="recipes.html" class="nav-link"><span data-i18n="nav_recipes">Recipes</span> <span class="nav-badge">New</span></a></li>
+          <li><a href="tracking.html" class="nav-link" style="color:var(--primary-green); font-weight:800;"><span data-i18n="nav_tracking">Track Order</span></a></li>
+          <li><a href="aboutus.html" class="nav-link active" data-i18n="nav_our_story">Our Story</a></li>
+          <li><a href="FAQ.html" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-dropdown-wrapper">
+          <button class="lang-selector-btn" id="langSelectorBtn" aria-label="Select Language">
+            <span id="currentLangLabel">EN</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown">
+            <li class="lang-item active" data-lang="en">EN &mdash; English</li>
+            <li class="lang-item" data-lang="es">ES &mdash; Español</li>
+            <li class="lang-item" data-lang="fr">FR &mdash; Français</li>
+            <li class="lang-item" data-lang="pt">PT &mdash; Português</li>
+            <li class="lang-item" data-lang="de">DE &mdash; Deutsch</li>
+            <li class="lang-item" data-lang="it">IT &mdash; Italiano</li>
+          </ul>
+        </div>
+
+        <button class="icon-btn" onclick="toggleSearchOverlay(true)" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+
+        <button class="icon-btn" id="cartTriggerBtn" aria-label="Shopping Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-counter" id="cartCountBadge" style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-nav-header">
+      <img src="assets/images/logo.png" alt="Precious Sea Salt" style="height: 40px;">
+      <button class="icon-btn" id="mobileDrawerClose" aria-label="Close Menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="shopall.html" data-i18n="nav_catalog">Catalog</a></li>
+      <li><a href="shopall.html" data-i18n="nav_shop_all">Shop All</a></li>
+      <li><a href="recipes.html" data-i18n="nav_recipes">Recipes</a></li>
+      <li><a href="tracking.html" style="color:var(--accent-gold-dark);" data-i18n="nav_tracking">Track Order</a></li>
+      <li><a href="aboutus.html" class="active" data-i18n="nav_our_story">Our Story</a></li>
+      <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- ABOUT US MAIN SECTION (MATCHING SCREENSHOT 'aboutus.png') -->
+  <main>
+    <section class="about-hero-grid">
+      <div style="border-radius: 6px; overflow: hidden; box-shadow: var(--shadow-lg);">
+        <picture>
+          <source type="image/webp" srcset="assets/images/process-coast.webp">
+          <img src="assets/images/process-coast.png" alt="Salt Flats and Mountain Reflection in Colima" style="width: 100%; height: 420px; object-fit: cover;">
+        </picture>
+      </div>
+      <div>
+        <h1 style="font-family: var(--font-serif); font-size: clamp(38px, 5vw, 50px); font-weight: 600; color: var(--primary-green); margin-bottom: 20px;">
+          Pure by Nature.
+        </h1>
+        <p style="font-size: 15px; color: var(--text-dark); line-height: 1.7; margin-bottom: 16px;">
+          Precious Natural was created to bring the authentic flavor and natural purity of Colima, Mexico, to every table.
+        </p>
+        <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
+          Our artisan sea salt is traditionally harvested and carefully selected to preserve its natural character, clean taste, and exceptional quality.
+        </p>
+        <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.7; margin-bottom: 28px;">
+          We believe the simplest ingredients can create the most memorable flavors. That is why we are committed to offering beautiful, high-quality products inspired by nature, tradition, and the joy of sharing good food.
+        </p>
+        <a href="shopall.html" class="btn-gold" style="background-color: var(--primary-green); color: #fff;">
+          <span>SHOP OUR PRODUCTS</span> <span>&rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 3 FEATURES BAR (MATCHING SCREENSHOT 'aboutus.png') -->
+    <section class="about-features-bar">
+      <div class="about-features-grid">
+        <div class="about-feature-item">
+          <h4>Pure & Natural</h4>
+          <p>Natural sea salt selected for its clean taste and exceptional mineral purity.</p>
+        </div>
+        <div class="about-feature-item">
+          <h4>Traditionally Harvested</h4>
+          <p>Artisan harvested by hand to preserve its natural crystal character and integrity.</p>
+        </div>
+        <div class="about-feature-item">
+          <h4>From Colima</h4>
+          <p>Inspired by the pristine nature and generations-old salt traditions of Colima, Mexico.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4 data-i18n="footer_care">CARE</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="shopall.html" data-i18n="nav_catalog">Shop</a></li>
+          <li><a href="recipes.html" data-i18n="nav_recipes">Recipes</a></li>
+          <li><a href="aboutus.html" data-i18n="nav_our_story">About Us</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_support">SUPPORT</h4>
+        <ul class="footer-links">
+          <li><a href="tracking.html" style="color:var(--accent-gold-light); font-weight:700;" data-i18n="nav_tracking">Track Order</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="policy.html">Privacy Policy</a></li>
+          <li><a href="shipping.html">Shipping Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-mission">
+        <h4 data-i18n="footer_mission">OUR MISSION</h4>
+        <p data-i18n="footer_mission_text">
+          At Precious, our mission is simple: to bring the natural character of Colima sea salt to everyday tables. Inspired by Mexico's coastal waters and generations of salt-making tradition, we celebrate salt in its purest form—natural, unrefined, and full of character.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-lang-select-wrapper">
+        <label for="footerLangSelect" data-i18n="footer_lang_label">Language</label>
+        <select id="footerLangSelect" class="footer-lang-select">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="pt">Português</option>
+          <option value="de">Deutsch</option>
+          <option value="it">Italiano</option>
+        </select>
+      </div>
+
+      <div class="payment-badges-row">
+        <span class="pay-badge amex">AMEX</span>
+        <span class="pay-badge apple"> Pay</span>
+        <span class="pay-badge diners">Diners</span>
+        <span class="pay-badge discover">Discover</span>
+        <span class="pay-badge google">G Pay</span>
+        <span class="pay-badge mastercard">Mastercard</span>
+        <span class="pay-badge paypal">PayPal</span>
+        <span class="pay-badge shop">shop pay</span>
+        <span class="pay-badge visa">VISA</span>
+      </div>
+
+      <div class="footer-copyright">
+        &copy; 2026 Precious Natural Sea Salt. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3 data-i18n="cart_title">Tu carrito</h3>
+      <button class="cart-close-btn" id="cartDrawerClose" aria-label="Cerrar Carrito">&times;</button>
+    </div>
+    <div class="cart-labels-row">
+      <span data-i18n="cart_product_col">PRODUCTO</span>
+      <span data-i18n="cart_total_col">TOTAL</span>
+    </div>
+    <div class="cart-body" id="cartDrawerBody"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal-row">
+        <span data-i18n="cart_subtotal">Total estimado</span>
+        <span class="cart-total-price" id="cartDrawerTotal">$0.00 USD</span>
+      </div>
+      <p class="cart-tax-notice" data-i18n="cart_tax_note">
+        Impuestos, descuentos y <a href="shipping.html">envío</a> calculados en la pantalla de pago.
+      </p>
+      <button class="cart-btn-checkout" onclick="openCheckoutModal()" data-i18n="cart_btn_checkout">Finalizar Compra</button>
+      <button class="cart-btn-whatsapp" onclick="checkoutWhatsApp()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.516 2 2.031 6.484 2.031 12c0 1.984.581 3.828 1.583 5.375L2 22l4.781-1.562c1.484.906 3.234 1.438 5.25 1.438 5.516 0 10-4.484 10-10s-4.484-9.875-10-9.875zm0 18.125c-1.781 0-3.328-.484-4.641-1.344l-.328-.219-3.094 1.016 1.031-3.016-.219-.344c-.953-1.422-1.469-3.094-1.469-4.875 0-4.578 3.719-8.297 8.297-8.297 4.578 0 8.297 3.719 8.297 8.297s-3.719 8.297-8.297 8.297zm4.547-6.203c-.25-.125-1.469-.719-1.688-.812-.234-.094-.406-.125-.578.125-.172.25-.672.812-.812.984-.156.172-.312.188-.562.062-.25-.125-1.047-.391-2-1.234-.734-.656-1.234-1.469-1.375-1.719-.156-.25-.016-.391.109-.516.109-.109.25-.281.375-.422.125-.141.172-.25.25-.422.078-.172.047-.328-.016-.453-.062-.125-.578-1.391-.797-1.906-.219-.5-.438-.438-.594-.438h-.516c-.172 0-.453.062-.688.328-.25.25-.938.922-.938 2.25 0 1.328.969 2.609 1.109 2.797.141.188 1.906 2.922 4.625 4.094.641.281 1.141.453 1.531.578.641.203 1.234.172 1.703.109.516-.078 1.469-.609 1.688-1.203.203-.594.203-1.094.141-1.203-.062-.109-.234-.172-.484-.297z"/></svg>
+        <span data-i18n="cart_btn_wa">Pedir por WhatsApp</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="modal-overlay" id="searchOverlay">
+    <div class="modal-content" style="max-width: 600px;">
+      <button class="modal-close" onclick="toggleSearchOverlay(false)">&times;</button>
+      <h3 style="font-family:var(--font-serif); font-size:26px; margin-bottom:16px; text-align:center;">Búsqueda</h3>
+      <input type="text" id="searchInput" class="tracking-input" style="width:100%;" placeholder="Buscar sal, condimento o receta..." oninput="handleSearch(this.value)">
+      <div id="searchResults" style="max-height: 300px; overflow-y:auto; margin-top:16px;"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

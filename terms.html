@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Precious Sea Salt</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+  <div class="announcement-bar"><span data-i18n="announcement">FAST SHIPPING ON ALL PRODUCTS | 100% NATURAL SEA SALT HARVESTED IN COLIMA, MEXICO</span></div>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="header-logo"><img src="assets/images/logo.png" alt="Precious Sea Salt"></a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="shopall.html" class="nav-link" data-i18n="nav_catalog">Catalog</a></li>
+          <li><a href="shopall.html" class="nav-link" data-i18n="nav_shop_all">Shop All</a></li>
+          <li><a href="recipes.html" class="nav-link"><span data-i18n="nav_recipes">Recipes</span></a></li>
+          <li><a href="tracking.html" class="nav-link" style="color:var(--primary-green); font-weight:800;"><span data-i18n="nav_tracking">Track Order</span></a></li>
+          <li><a href="aboutus.html" data-i18n="nav_our_story">Our Story</a></li>
+          <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="cartTriggerBtn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="cart-counter" id="cartCountBadge" style="display:none;">0</span></button>
+      </div>
+    </div>
+  </header>
+  <main style="max-width: 800px; margin: 60px auto 100px; padding: 0 24px; line-height: 1.8;">
+    <h1 style="font-family: var(--font-serif); font-size: 40px; color: var(--primary-green); margin-bottom: 24px;">Terms of Service</h1>
+    <p>Welcome to Precious Natural. By visiting our website and purchasing our natural artisan products, you engage in our service and agree to be bound by the following terms and conditions.</p>
+    <h3 style="margin: 24px 0 10px; font-family: var(--font-serif); font-size: 24px;">Products & Pricing</h3>
+    <p>Prices for our products are subject to change without notice. We reserve the right at any time to modify or discontinue any product. All prices are listed in USD or local currency.</p>
+    <h3 style="margin: 24px 0 10px; font-family: var(--font-serif); font-size: 24px;">Accuracy of Billing</h3>
+    <p>You agree to provide current, complete, and accurate purchase and account information for all purchases made at our store.</p>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-col"><h4>CARE</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="shopall.html">Shop</a></li><li><a href="recipes.html">Recipes</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>SUPPORT</h4><ul class="footer-links"><li><a href="tracking.html">Track Order</a></li><li><a href="FAQ.html">FAQ</a></li><li><a href="policy.html">Privacy Policy</a></li><li><a href="shipping.html">Shipping Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
+      <div class="footer-col footer-mission"><h4>OUR MISSION</h4><p>At Precious, our mission is simple: to bring the natural character of Colima sea salt to everyday tables.</p></div>
+    </div>
+  </footer>
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header"><h3>Tu carrito</h3><button class="cart-close-btn" id="cartDrawerClose">&times;</button></div>
+    <div class="cart-body" id="cartDrawerBody"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal-row"><span>Total estimado</span><span class="cart-total-price" id="cartDrawerTotal">$0.00 USD</span></div>
+      <button class="cart-btn-whatsapp" onclick="checkoutWhatsApp()">Pedir por WhatsApp</button>
+    </div>
+  </aside>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
